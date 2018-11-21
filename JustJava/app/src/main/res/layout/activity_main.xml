@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="15dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp"
+    android:orientation="vertical"
+    android:background="@drawable/coffeebg"
+    tools:context=".MainActivity">
+
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:textColor="#838080"
+        android:textSize="25dp"
+        android:textAllCaps="true"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:onClick="incQuantityUp"
+            android:text="+"
+            android:textSize="9dp" />
+
+        <TextView
+            android:id="@+id/quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#54EB5B"
+            android:textSize="18dp"
+            />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:onClick="decQuantity"
+            android:text="-"
+            android:textSize="9dp" />
+    </LinearLayout>
+
+    <!--<EditText
+        android:id="@+id/quantity_text_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:inputType="number"
+        android:text="0"
+        android:textSize="18dp"
+        />-->
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Cost"
+        android:textColor="#838080"
+        android:textSize="25dp"
+        android:textAllCaps="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/cost_text_view"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="$0"
+
+        android:textColor="#54EB5B"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_height="42dp"
+        android:text="Order"
+        android:textSize="9dp"
+        android:onClick="submitOrder"
+        />
+</LinearLayout>

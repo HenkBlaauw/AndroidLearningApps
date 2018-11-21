@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:src="@drawable/kitten"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hallo Maatjie!!"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:fontFamily="cursive"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_width="198dp"
+        android:layout_height="73dp"
+        android:textSize="32sp"
+        android:textColor="#A70D0D"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="From, Henk"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        />
+
+
+</RelativeLayout>
+<!--
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+&lt;!&ndash;&ndash;&gt;</android.support.constraint.ConstraintLayout>-->
