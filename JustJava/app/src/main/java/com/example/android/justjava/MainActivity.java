@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     int cost = 11;
     int quantity = 0;
     int pCup = 2;
-
+    int price ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void incQuantityUp(View view){
         quantity++;
-        display(quantity);
+        displayQuantity(quantity);
     }
 
 
@@ -51,7 +51,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Quantity of cups of coffee can not be less than zero!", Toast.LENGTH_SHORT).show();
         }
 
-        display(quantity);
+        displayQuantity(quantity);
+    }
+
+    public void calculatePrice(int quantity, int cost){
+       price = quantity * 5;
+
     }
 
     private void displayMessage(String message) {
@@ -61,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given quantity value on the screen.
      */
-    private void display(int number) {
+    private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
@@ -71,9 +76,18 @@ public class MainActivity extends AppCompatActivity {
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 
+    public void createOrder(int cost){
+        displayMessage("Hi fellow colleague \n "+ quantity + " cups of coffee\n R" + price + "\n Enjoy your day!");
+    }
+
+
+
+
     public void submitOrder(View view){
-        String priceMessage = "Item count " + quantity + "\n" + "Total Price: R" +( quantity*cost);
-        displayMessage(priceMessage);
+        String priceMessage = "Item count " + quantity + "\n" + "Total Price: R" + price;
+        calculatePrice(quantity,21);
+        createOrder(cost);
+        //displayMessage(priceMessage);
     }
 
 
